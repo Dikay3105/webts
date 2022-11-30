@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="shortcut icon" href="../../kq.ico" />
+
+    
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="controll_product.js"
+    ></script>
+
+    <script>
+      function res() {
+        var x = document.getElementById("quanly");
+          if (x.className === "quanly") {
+            x.className += " responsive";
+            x.className += " animate1";
+          } else {
+            x.className = "quanly";
+          }
+      }
+    </script>
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+/>
+
+    <title> BÁN HÀNG </title>
+    
+   
+    
+    
+
+
+</head>
+
+<body>
+    
+    
+
+
+      <div id="wrapper" class="tmp_container hide ">
+        <div id="chinhsua" class="add_custom animate">
+          <h1>CHỈNH SỬA SẢN PHẨM</h1>
+            <form>
+              <label class="text">ID<input type="text" id="id" class="inputbar"></label>
+              <label class="text">Tên sản phẩm<input type="text" id="name" class="inputbar"></label>
+              <label class="text">Giá<input type="text" id="gia" class="inputbar"></label>
+              <label class="text">Số lượng<input type="text" id="sl" class="inputbar"></label>
+              <label class="text"> Loại sản phẩm
+                <select id="loaisp">
+                  <option selected value="nhẫn">Nhẫn</option>
+                  <option value="dây chuyền" >Dây chuyền</option>
+                  <option value="đồng hồ" >Đồng hồ</option>
+                  <option value="bông tai" >Bông tai</option>
+                </select>
+              </label><br><br>
+              <label class="text">Ảnh sản phẩm<div id="img"></div></label>
+              <div class="container1">
+                <div id="dnd">
+                  <span>Drag and drop file here to change image</span>
+                </div>
+                <div class="preview"></div>
+              </div>
+            </form>
+          <button class="addbtn" onclick="check_duplicate()">Thêm</button>
+          <button class="exitbtn" onclick="custom_popout();">X</button>
+          <button  onclick="custom_infor()">sửa</button>
+        </div>
+      </div>
+
+
+      <div id="header">
+        <a href=""><img src="../../kq.png" width="100px" height="100%" style="position: absolute;top:0px;right:50%"></a>
+                    <p style="position: absolute;right:43% ;top: -20px; font-size:3vw; color: aqua;">SIMP</p>
+
+                    <div id="toggle" onclick="res()">
+                      <i class="fas fa-bars"></i>
+                      Menu
+                  </div>
+      </div>
+
+      <div class="container">
+        <div id="quanly" class="quanly">
+          <ul  class="nav menu">
+            <li><a href="../user/config_user.html">Quản Lý Thông Tin & Tài Khoản</a></li>
+            <li><a href="../donhang/config_bill.html">Quản Lý Đơn Hàng</a></li>
+            <li class="active"><a href="../product/config_product.html">Chỉnh Sửa Sản Phẩm</a></li>
+          </ul>
+        </div>
+        <div id="content">
+
+          <input type="text" id="timkiem" class="searchbar" placeholder="Search">
+          
+          <label style="margin-left: 40%; margin-top: 5px;margin-bottom: 5px;"> Tìm theo
+            <select id="search_choice" onchange="document.getElementById('timkiem').value='', show2ndchoice()">
+              <option selected value="id">id</option>
+              <option value="name" >Tên sản phẩm</option>
+              <option value="gia" >Giá</option>
+              <option value="loai" >Loại sản phẩm</option>
+              <option value="sl" >Số lượng</option>
+            </select>
+          </label>
+
+          &nbsp;
+          
+            <label class="hide" id="hoadon" style=" margin-top: 5px;margin-bottom: 5px;"> Loại
+              <select id="search_choice2" onchange="search2nd()">
+                <option selected value="macdinh">Chọn loại sản phẩm</option>
+                <option value="nhẫn">Nhẫn</option>
+                <option value="dây chuyền" >Dây chuyền</option>
+                <option value="bông tai" >Bông tai</option>
+                <option value="đồng hồ" >Đồng hồ</option>
+              </select>
+            </label>
+
+          <button class="addbtn" onclick="custom_popup()">Thêm</button>
+            <button class="addbtn" onclick="showProductList(), document.getElementById('hoadon').classList.add('hide'), document.getElementById('search_choice').value='id'">Refresh</button>
+
+          <div class="result">
+            <table id="list_user" border="1" style="width:100%">
+              
+            </table>
+
+            <table id="kq" class="hide" border="1" style="width:100%;">
+            </table>
+
+
+            
+          
+          
+            
+          </div>
+          
+              
+          
+          
+        </div>
+      </div>
+
+
+    
+            
+
+</body>
+
+</html>

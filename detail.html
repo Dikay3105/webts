@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="paging.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="./sp_slider/reset.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="./sp_slider/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+    />
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+
+
+
+
+    <link rel="shortcut icon" href="kq.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="login_style.css" />
+
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="./slider/app.css" />
+    <link rel="stylesheet" href="searchbar.css" />
+
+    <script src="addcart.js"></script>
+    <script src="search.js"></script>
+    <script src="login_form.js"></script>
+    <script src="login.js"></script>
+    <script src="slider.js"></script>
+    <link rel="stylesheet" href="./backtop_btn/backtop_btn.css" />
+    <title> BÁN HÀNG </title>
+    
+    <style>
+        .content{
+          margin-top: 200px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    
+    
+<!--Phần login-->
+<div class="form_container hide" id="login_container">
+  <div id="login" class="divsection animate hide">
+    <section>
+        <!--Bắt Đầu Phần Hình Ảnh-->
+        <div class="img-bg">
+            <img src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/tao_trang_dang_nhap/hinh_anh_minh_hoa.jpg"
+                alt="Hình Ảnh Minh Họa">
+        </div>
+        <!--Kết Thúc Phần Hình Ảnh-->
+        <!--Bắt Đầu Phần Nội Dung-->
+        <div class="noi-dung">
+            <div class="form">
+                <button class="exit_btn" onclick="login_exit()"><p style="font-size:20px; color: white;">x</p></button>
+                <h2>Trang Đăng Nhập</h2>
+                <form action="">
+                    <div class="input-form">
+                        <span>Tên Người Dùng</span>
+                        <input type="text" id="tk">
+                    </div>
+                    <div class="input-form">
+                        <span>Mật Khẩu</span>
+                        <input type="password" id="mk"  onkeypress="	if(event.keyCode==13){check_login()}">
+                    </div>
+                    <div id="login_error" class="hide" style="color:red">Tài khoản không tồn tại</div>
+                    <div class="nho-dang-nhap">
+                        <label><input type="checkbox" id="nhodn" name="" value="yes" onchange="remember_tick()"> Nhớ Đăng Nhập</label>
+                    </div>
+                    <div class="input-form">
+                        <input type="button" onclick="check_login()"  style="background-color: #ff4584;color: white;cursor: pointer; " value="Đăng Nhập">
+                    </div>
+                    <div class="input-form">
+                        <p>Bạn Chưa Có Tài Khoản? <a style="cursor: pointer;" onclick="signup_popup()">Đăng Ký</a></p>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+        <!--Kết Thúc Phần Nội Dung-->
+    </section>
+</div>
+ </div>
+<!--Kết Thúc Phần login-->
+     
+
+<!--Phần đk-->
+<div class="form_container hide" id="signup_container">
+  <div id="signup" class="divsection_dk animate hide">
+    <section>
+        <!--Bắt Đầu Phần Hình Ảnh-->
+        <div class="img-bg">
+            <img src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/tao_trang_dang_nhap/hinh_anh_minh_hoa.jpg"
+                alt="Hình Ảnh Minh Họa">
+        </div>
+        <!--Kết Thúc Phần Hình Ảnh-->
+        <!--Bắt Đầu Phần Nội Dung-->
+        <div class="noi-dung">
+            <div class="form">
+                <button class="exit_btn" onclick="signup_exit()"><p style="font-size:20px; color: white;">x</p></button>
+                <h2>Tạo Tài Khoản Mới</h2>
+                <form action="">
+                  <div class="input-form">
+                    <span>Số Điện Thoại</span>
+                    <input type="text" id="sdt">
+                  </div>
+                  <div class="input-form">
+                    <span>Mail</span>
+                    <input type="text" id="mail">
+                  </div>
+                  <div class="input-form">
+                    <span>Địa chỉ</span>
+                    <input type="text" id="diachi">
+                  </div>
+                    <div class="input-form">
+                        <span>Tên Người Dùng</span>
+                        <input type="text" id="tk_new">
+                    </div>
+                    <div class="input-form">
+                        <span>Mật Khẩu</span>
+                        <input type="password" id="mk_new">
+                    </div>
+                    <div class="input-form">
+                      <span>Xác Nhận Mật Khẩu</span>
+                      <input type="password" id="mk_check">
+                  </div>
+                    
+                    <div class="input-form">
+                        <input type="button" style="background-color: #ff4584;color: white;cursor: pointer; " onclick="check_duplicate()" value="Xác nhận">
+                    </div>
+                    
+                </form>
+              
+            </div>
+        </div>
+        <!--Kết Thúc Phần Nội Dung-->
+    </section>
+</div>
+ </div>
+<!--Kết Thúc Phần đk-->
+
+
+<div class="form_container hide" id="cart_container">
+  <div id="cart" class="divsection_cart animate hide">
+    <button class="exit_btn" onclick="cart_exit()"><p style="font-size:20px; color: white;">x</p></button>
+    <div style="width:100%;text-align:center; margin-top: 10px;">
+      <h3 class="image-title">Giỏ hàng</h3>
+    </div>
+    <table border="1" id="list_cart" style="width:80%;text-align: center; margin-left:10%;line-height: 50px; margin-top: 2%;">
+      
+    </table>
+    <button id="thanhtoanbtn" onclick="pay()" style=" margin-top: 10px;color:white;font-size: 11px;font-style: italic;font-family: Roboto,sans-serif; font-weight: 900;width:40%; margin-left: 30%; height: 50px; background-color: #ad2a36; border:none; border-radius:15px">THANH TOÁN</button><br><br>
+
+  </div>
+</div>
+
+<div class="form_container hide" id="detail_container">
+  <div id="detail" class="divsection_detail animate hide">
+    
+    <div style=" width:60%;height:100%;float:left;border-right: solid 1px gray;" id="imgcart">
+      
+    </div>
+
+    <div style=" width:40%;height:300px;float:left;text-align: center;">
+      <button class="exit_btn" onclick="addcart_exit()"><p style="font-size:20px; color: white;">x</p></button>
+      <br><br><br>
+      <h3 class="image-title" id="tensp"></h3><br>
+      <h2  id="masp"></h2><br>
+      <h2 class="price-title" id="giasp"></h2>
+      <label style="margin-left:20%">Số lượng: <input id="SL" type="number" value="1" style="width:20%; border: none; color: red; font-size: 20px;"></label>
+
+      <div id="paynowbtn">
+        
+      </div>
+
+      <div id="addcartbtn">
+        
+      </div>
+      <div style="text-align: center;margin-top: 10px;font-weight: 400;margin-bottom: 10px;color: #4c4c4c;font-family: Roboto,sans-serif;font-size: 14px;">Tư vấn ngay:
+        <a href="tel:0123456789" style=" color: #ad2a36;font-weight: bold;font-size: 16px; text-decoration: none;outline: none;cursor: pointer;">0123456789</a> (miễn phí)
+        <div class="media">
+          <span>Hoặc qua:</span>
+          <a href="https://zalo.me/trangsucpnjofficial" target="_blank" style="margin-right:5px !important;">
+            <img style="margin-left: 35%;max-width: 100%;height: 30px;vertical-align: middle;font-size: 0;" src="https://cdn.pnj.io/images/image-update/2021/hotline/icon-zalo.svg">
+          </a>
+          <a href="https://m.me/PNJ.COM.VN?ref=w16625060" target="_blank" style="margin-right:5px !important;">
+            <img style="margin-left: 55%;max-width: 100%;height: 30px;vertical-align: middle;font-size: 0;" src="https://cdn.pnj.io/images/image-update/2021/hotline/icon-facebook.svg">
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="search-result hide">
+            
+
+  <div class="products">
+  </div>
+
+  </div>
+
+<div id="header">
+  <button onclick="login_popup(), autofill()" id="dn_btn" style="position: absolute;right: 20%;bottom:5px;width:auto; background-color: white;">Đăng nhập</button>
+    <div class="logouser hide">
+
+    </div>
+
+    <div class="infor_user animate2">
+      <div class="dx_zone"><a href="" onclick="logout()">ĐĂNG XUẤT</a></div>
+      <div class="setting_zone hide"><a href="./admin/user/config_user.html" target="_blank"><img src="./img/icon/setting.jpg"></a></div>
+      <div class="img_avt"><img src="./img/avt/default.jpg"></div>
+
+    </div>
+
+    <div class="logocart" onclick="cart_popup(), load_cart()">
+      
+      <img src="./img/icon/cart.jpg">
+
+    </div>
+
+
+    
+    
+    <a href="./index.html"><img src="kq.png" width="100px" height="100px" style="position: absolute;top:0px;right:50%"></a>
+    <p style="position: absolute;right:43% ;top: 10px; font-size:3vw; color: aqua;">SIMP</p>
+    
+  
+
+</div>
+
+
+
+
+
+<div id="topmenu">
+  <div id="toggle">
+    <i class="fas fa-bars"></i>
+    Menu
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+  $(document).ready(function() {
+      $('#toggle').click(function() {
+          $('nav').slideToggle();
+      });
+  })
+</script>
+    <nav>
+        <ul id="main-menu">
+            <li><a class="link" href="./index.html">Trang chủ</a></li>
+            <li><a class="link" href="detail.html?trangsuc">Trang sức</a>
+              <ul>
+                <li><a class="link" href="detail.html?nhan">Nhẫn</a></li>
+                <li><a class="link" href="detail.html?daychuyen">Dây chuyền</a></li>
+                <li><a class="link" href="detail.html?bongtai">Bông tai</a></li>
+            </ul>
+            </li>
+            <li><a class="link" href="detail.html?dongho">Đồng hồ</a></li>
+            <li><a class="link" href="#">Liên hệ</a>
+                <ul>
+                    <li><a class="link" href="">FACEBOOK</a></li>
+                    <li><a class="link" href="">GMAIL</a></li>
+                    <li><a class="link" href="">SỐ ĐIỆN THOẠI</a></li>
+                </ul>
+            </li>
+            <li><input type="text" placeholder="Tìm kiếm nhanh" class="searchbar"></li>
+
+        </ul>
+    </nav>
+</div>
+
+
+    <div id="wrapper" >
+       
+      
+
+
+
+    <div class="content">
+        <div class="container">
+            <div class="content__search">
+                <input type="text" placeholder="Nhập vào đây">
+                <button id="search">Search</button>
+                <button id="refresh">Refresh</button>
+                <label> Loại sản phẩm
+                  <select id="choice">
+                    <option selected value="macdinh">Chọn loại sản phẩm</option>
+                    <option value="nhan">Nhẫn</option>
+                    <option value="bongtai">Bông tai</option>
+                    <option value="daychuyen">Dây chuyền</option>
+                    <option value="dongho">Đồng hồ</option>
+                  </select>
+                </label>
+            </div>
+            
+            <div class="content__product" id="product">
+                <!-- <div class="content__product__item">
+                    <a href="">
+                        <img src="" alt="">
+                    </a>
+                    <h3></h3>
+                </div> -->
+            </div>
+            <div class="no-result">Không có kết quả tìm kiếm</div>
+            <div class="content__paging">
+                <div class="page">
+                    <ul>
+                        <li class="btn-prev btn-active fas fa-angle-left"></li>
+                        <div class="number-page" id="number-page">
+                            <!-- <li class="active">
+                            <a>1</a>
+                        </li>
+                        <li>
+                            <a>2</a>
+                        </li>
+                        <li>
+                            <a>3</a>
+                        </li> -->
+                        </div>
+                        <li class="btn-next fas fa-angle-right"></li>
+                    </ul>
+                </div>
+                <div class="page-config">
+                    <label for="">Item per page: </label>
+                    <select name="" id="mySelect">
+                        <option value="3">3</option>
+                        <option value="6" selected>6</option>
+                        <option value="9">9</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class="total-page"></div>
+                <div class="total-item"></div>
+            </div>
+
+            <footer class="footer1">
+              <div class="row">
+                  <div class="boxcenter">
+                    <div class="boxfooter1">
+                        <h3>TÌM CỬA HÀNG</h3>
+                          <div class="mr">Store 1: 273 An Dương Vương, P.3, Q.5, TP.HCM</div>
+                          <div class="mr">Store 2: 105 Bà Huyện Thanh Quan, P7, Q.3, TP.HCM</div>
+                          <div class="mr">Store 3: 273 An Dương Vương, P.3, Q.5, TP.HCM</div>
+                    </div>
+                    <div class="boxfooter2">
+                      <h3>CHĂM SÓC KHÁCH HÀNG</h3>  
+                      <div class="mr"> <a href=""> Hướng dẫn đặt hàng</a></div>
+                      <div class="mr"> <a href=""> Chính sách đổi trả</a></div>
+                      <div class="mr"> <a href=""> Chính sách bảo hành</a></div>
+                      <div class="mr"> <a href=""> Gửi góp ý, khiếu nại</a></div>
+                    </div>
+                    <div class="boxfooter3">
+                      <h3>THEO DÕI CHÚNG TÔI </h3>  
+                      <div class="mr"> <a href=""> <i class="fa-brands fa-facebook"></i> Facebook </a></div>
+                      <div class="mr"> <a href=""> <i class="fa-brands fa-instagram"></i> Instagram </a></div>
+                      <div class="mr"> <a href=""> <i class="fa-brands fa-square-youtube"></i> Youtube </a></div>
+                    </div>
+                  </div>
+              </div>
+              <div class="row textcenter"> Công ty TNHH 1 đứa Company </div>
+          </footer>
+        </div>
+        
+    </div>
+    <script src="pagingNhan.js"></script>
+
+
+                  
+
+    
+    
+    
+    </div>
+    <button id="myBtn" title="Lên đầu trang"><p style="font-size: 30px ; color: black; transform: rotate(-90deg);">></p></button>
+
+    
+
+
+
+    <script>
+      window.onload=function() {
+        var status = JSON.parse(localStorage.getItem('login_status'));
+        var nhotk = JSON.parse(localStorage.getItem('nhotkmk'));
+        var userArray = JSON.parse(localStorage.getItem('user'));
+        if(status==true) {
+          avt_fill();    
+                //login_exit();
+                document.getElementById('dn_btn').classList.add('hide');
+                document.querySelector('.logouser').classList.remove('hide');
+                localStorage.setItem('login_status','true');
+                for(var i=0;i<userArray.length;i++){
+                  if(userArray[i].username==nhotk.username) document.querySelector('.setting_zone').classList.remove('hide');
+        }
+                
+        }
+
+        window.onscroll = function() {scrollFunction()};
+          function scrollFunction() {
+          
+          if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+          document.getElementById("myBtn").style.display = "block";
+          } else {
+          document.getElementById("myBtn").style.display = "none";
+          }
+          }
+          
+          document.getElementById('myBtn').addEventListener("click", function(){
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+          });
+        
+      }
+
+      var modal = document.querySelector('.search-result');
+      var modal1 = document.querySelector('.searchbar');
+      window.onclick = function(event) {
+  if (event.target != modal && event.target != modal1) {
+    modal.classList.add('hide');
+  }
+}
+
+  </script>
+    
+            
+
+</body>
+
+</html>

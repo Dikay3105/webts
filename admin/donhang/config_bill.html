@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="shortcut icon" href="../../kq.ico" />
+
+    
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="controll_bill.js"
+    ></script>
+
+    <script>
+      function res() {
+        var x = document.getElementById("quanly");
+          if (x.className === "quanly") {
+            x.className += " responsive";
+            x.className += " animate1";
+          } else {
+            x.className = "quanly";
+          }
+      }
+    </script>
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+/>
+
+    <title> BÁN HÀNG </title>
+    
+
+
+</head>
+
+<body>
+    
+    
+
+
+      <div id="wrapper" class="tmp_container hide">
+        <div id="chinhsua" class="add_custom animate">
+          <h1>THÔNG TIN HÓA ĐƠN</h1>
+            <form>
+              <label class="text">Mã hóa đơn<input type="text" id="mahd" class="inputbar" disabled></label>
+              <label class="text">Tài khoản mua<input type="text" id="tk" class="inputbar" disabled></label>
+              <label class="text">Ngày mua<input type="text" id="date" class="inputbar" disabled></label>
+              <label class="text">Thời gian<input type="text" id="time" class="inputbar" disabled></label>
+              <label class="text">Tình trạng</label>
+              <label class="switch"><input id='duyet' type="checkbox" ><span class="slider round"></span></label><br><br>
+              <label class="text">Chi tiết sản phẩm: 
+                  <table id="billdetail" border="1" style="width:80%;margin-left: 10%;"></table>
+              
+              </label>
+              <br>
+            </form>
+          <button class="exitbtn" onclick="custom_popout();">X</button>
+          <button  onclick="custom_infor()">OK</button><br>
+        </div>
+      </div>
+
+
+      <div id="header">
+        <a href=""><img src="../../kq.png" width="100px" height="100%" style="position: absolute;top:0px;right:50%"></a>
+                    <p style="position: absolute;right:43% ;top: -20px; font-size:3vw; color: aqua;">SIMP</p>
+
+                    <div id="toggle" onclick="res()">
+                      <i class="fas fa-bars"></i>
+                      Menu
+                  </div>
+      </div>
+
+      <div class="container">
+        <div id="quanly" class="quanly">
+          <ul  class="nav menu">
+            <li><a href="../user/config_user.html">Quản Lý Thông Tin & Tài Khoản</a></li>
+            <li class="active"><a href="../donhang/config_bill.html">Quản Lý Đơn Hàng</a></li>
+            <li><a href="../product/config_product.html">Chỉnh Sửa Sản Phẩm</a></li>
+          </ul>
+        </div>
+        <div id="content">
+
+          <input type="text" id="timkiem" class="searchbar" placeholder="Search">
+          
+          <label style="margin-left: 40%; margin-top: 5px;margin-bottom: 5px;"> Tìm theo
+            <select id="search_choice" onchange="show2ndchoice(), document.getElementById('timkiem').value=''">
+              <option selected value="mahd">Mã hóa đơn</option>
+              <option value="tk" >Tài khoản mua</option>
+              <option value="status" >Tình trạng đơn hàng</option>
+            </select>
+          </label>
+          &nbsp;
+          
+            <label class="hide" id="hoadon" style=" margin-top: 5px;margin-bottom: 5px;"> Tình trạng đơn hàng
+              <select id="search_choice2" onchange="search2nd()">
+                <option selected value="macdinh">Chọn trạng thái hóa đơn</option>
+                <option value="ok">Đã duyệt</option>
+                <option value="ko" >Chưa duyệt</option>
+              </select>
+            </label>
+          
+
+          <button class="addbtn" onclick="showBillList(), document.getElementById('hoadon').classList.add('hide'), document.getElementById('search_choice').value='mahd'">Refresh</button>
+
+          <div class="result">
+            <table id="list_user" border="1" style="width:100%">
+              
+            </table>
+
+            <table id="kq" class="hide" border="1" style="width:100%;">
+            </table>
+
+          </div>
+          
+              
+          
+          
+        </div>
+      </div>
+
+
+    
+            
+
+</body>
+
+</html>

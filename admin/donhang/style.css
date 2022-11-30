@@ -1,0 +1,348 @@
+body {
+    background-color: rgb(241, 234, 234);
+}
+
+#header {
+    width: 100%;
+    height: 10vh;
+    width: 100%;
+    top: 0;
+    right:0px;
+    z-index: 10;
+    background-color: black;
+    position: fixed;
+}
+
+a{
+    text-decoration: none;
+}
+
+.quanly {
+    width: 15%;
+    height: 100%;
+    float: left;
+    position: fixed;
+    left:0px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #fff;
+    box-shadow: 1px 0px 10px rgb(0 0 0 / 5%);
+}
+
+.quanly ul.nav .active a{
+    color: #fff;
+    background-color: #30a5ff;
+}
+
+#content {
+    width: 85%;
+    height: auto;
+    float: left;
+    background-color: rgb(241, 234, 234);
+    margin-left: 15%;
+}
+
+.container {
+    margin-top: 10vh;
+    height:90vh;
+}
+
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    margin-top: 0;
+}
+
+.nav>li {
+    position: relative;
+    display: block;
+    height: 50px;
+    width: 100%;
+    color:#30a5ff;
+    font-weight:300;
+    font-size: 15px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.nav>li:hover {
+    background-color: rgb(241, 234, 234);
+    transition: all 0.2s ease;
+}
+
+.nav>li a {
+    position: relative;
+    display: block;
+    height: 50px;
+    width: 100%;
+    color: #30a5ff;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+
+.result {
+    width: 80%;
+    height: 80%;
+    margin-left:10%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.addbtn {
+    bottom: 0px;
+    margin-left:0%;
+    margin-top: 10px;
+}
+
+.exitbtn {
+    position: absolute;
+    top: 5px;
+    right:5px;
+    background: none;
+    border: none;
+    color: red;
+    font-size: 30px;
+}
+
+.searchbtn {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.hide{
+    display: none;
+}
+
+.tmp_container {
+    height: 180%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    top: 0px;
+    z-index: 11;
+}
+
+.add_custom {
+    padding-top: 1%;
+    height:fit-content;
+    width:80%;
+    background-color: white;
+    margin-left:10%;
+    margin-top: 0;
+    text-align: center;
+    border-radius: 30px;
+    position: relative;
+    border:3px solid red;
+}
+
+.searchbar {
+    margin-top: 10px;
+    margin-left:40%;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    box-shadow: none;
+    display: block;
+    width: 10%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 20px;
+    transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+
+}
+
+.img {
+    height:50px;
+    width: 50px;
+  }
+
+
+.inputbar {
+    margin-top: 10px;
+    margin-left:29%;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    box-shadow: none;
+    display: block;
+    width: 40%;
+    height: 34px;
+    padding: 6px 12px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 20px;
+    text-align: center;
+    transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+}
+
+.text {
+    font-size: 16px;
+    font-weight: bolder;
+    color: #607db8;
+    letter-spacing: 1px;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  #toggle {
+    display: none;
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+.animate1{
+    animation: smalltobig 0.5s;
+    animation-direction: alternate;
+}
+
+
+@keyframes smalltobig {
+    0%   {width:0px}
+  
+    100% { width:40%}
+}
+
+@media only screen and (max-width: 1400px) {
+    .quanly {
+        width: 0;
+    }
+
+    #toggle {
+        display: block;
+    }
+
+    #content {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .result {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .searchbar {
+        width: 40%;
+        margin-left: 30%;
+    }
+    .quanly.responsive {
+        width: 40%;
+    }
+    .add_custom {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5%;
+    }
+
+
+}
+
+@import url(https://fonts.googleapis.com/css?family=BenchNine:700);

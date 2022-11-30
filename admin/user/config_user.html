@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="shortcut icon" href="../../kq.ico" />
+
+    
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="controll_user.js"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title> BÁN HÀNG </title>
+    
+    <script>
+      function res() {
+        var x = document.getElementById("quanly");
+          if (x.className === "quanly") {
+            x.className += " responsive";
+            x.className += " animate1";
+          } else {
+            x.className = "quanly";
+          }
+      }
+    </script>
+
+</head>
+
+<body>
+    
+    
+
+
+      <div id="wrapper" class="tmp_container hide">
+        <div id="chinhsua" class="add_custom animate">
+          <h1>CHỈNH SỬA USER</h1>
+            <form>
+              <label class="text">HỌ VÀ TÊN<input type="text" id="name" class="inputbar"></label>
+              <label class="text">Tài khoản<input type="text" id="tk" class="inputbar"></label>
+              <label class="text">Mật khẩu<input type="text" id="mk" class="inputbar"></label>
+              <label class="text">SĐT<input type="text" id="sdt" class="inputbar"></label>
+              <label class="text">Mail<input type="text" id="mail" class="inputbar"></label>
+              <label class="text">Địa chỉ<input type="text" id="diachi" class="inputbar"></label>
+              <label class="switch"><input id='admin' type="checkbox" ><span class="slider round"></span></label>
+            </form>
+          <button class="addbtn" onclick="check_duplicate()">Thêm</button>
+          <button class="exitbtn" onclick="custom_popout();">X</button>
+          <button  onclick="custom_infor()">Sửa</button>
+        </div>
+      </div>
+
+
+      <div id="header">
+        <a href=""><img src="../../kq.png" width="100px" height="100%" style="position: absolute;top:0px;right:50%"></a>
+                    <p style="position: absolute;right:43% ;top: -20px; font-size:3vw; color: aqua;">SIMP</p>
+
+
+                    <div id="toggle" onclick="res()">
+                      <i class="fas fa-bars"></i>
+                      Menu
+                  </div>
+      </div>
+
+    
+
+      <div class="container">
+        <div id="quanly" class="quanly">
+          <ul  class="nav menu">
+            <li class="active"><a href="../user/config_user.html">Quản Lý Thông Tin & Tài Khoản</a></li>
+            <li><a href="../donhang/config_bill.html">Quản Lý Đơn Hàng</a></li>
+            <li><a href="../product/config_product.html">Chỉnh Sửa Sản Phẩm</a></li>
+          </ul>
+        </div>
+        
+        <div id="content">
+
+          <input type="text" id="timkiem" class="searchbar" placeholder="Search">
+          
+          <label style="margin-left: 40%; margin-top: 5px;margin-bottom: 5px;"> Tìm theo
+            <select id="search_choice" onchange="document.getElementById('timkiem').value=''">
+              <option selected value="name">Tên</option>
+              <option value="tk" >TK</option>
+              <option value="mk">MK</option>
+              <option value="sdt" >SĐT</option>
+              <option value="mail" >Mail</option>
+            </select>
+          </label>
+          <button class="addbtn" onclick="custom_popup()">Thêm</button>
+            <button class="addbtn" onclick="showUserList()">Refresh</button>
+          <div class="result">
+            <table id="list_user" border="1" style="width:100%">
+              
+            </table>
+
+            
+
+
+            
+          
+          
+            
+          </div>
+          
+              
+          
+          
+        </div>
+      </div>
+
+
+    
+            
+
+</body>
+
+</html>

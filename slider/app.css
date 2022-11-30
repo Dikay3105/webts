@@ -1,0 +1,174 @@
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+input {
+  line-height: normal;
+}
+label,
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+}
+.slider {
+  max-width: 100%;
+  margin: 25px auto;
+  position: relative;
+}
+
+.slider:hover .slider-next {
+  display:flex;
+}
+
+.slider:hover .slider-prev {
+  display:flex;
+}
+
+.slider-next, .slider-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 100rem;
+  justify-content: center;
+  align-items: center;
+  color: #999;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 5;
+  display:none;
+  text-align: center;
+
+}
+.slider-next {
+  right: 5px;
+}
+
+
+.slider-prev {
+  left: 5px;
+}
+
+
+.slider-item:hover .slider-next{
+  display:flex;
+}
+
+.slider-next:hover ,.slider-prev:hover {
+  background-color: #2cccff;
+  transition: all 0.5s ease;
+}
+
+
+.slider-dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  z-index: 2;
+}
+
+.slider-dots li {
+  margin: 0 10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 100rem;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.25s linear;
+}
+.slider-dots li.active {
+  background-color: black;
+}
+.slider-wrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  
+}
+.slider-main {
+  display: flex;
+  position: relative;
+  transition: transform 0.5s linear;
+  height: 100%;
+}
+.slider-item {
+  height: 100%;
+  width: 100%;
+  flex: 1 0 100%;
+  user-select: none;
+}
+.slider-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.right-icon:before {
+  content: '';
+  width: 3px;
+  position: absolute;
+  transform: rotate(52deg);
+	top: 22px;
+	height: 12px;
+  display: block;
+  background-color: black;
+}
+.right-icon:after {
+  content: '';
+  width: 3px;
+  position: absolute;
+  transform: rotate(-230deg);
+	top: 16px;
+	height: 12px;
+  display: block;
+  background-color: black;
+}
+
+.left-icon:before {
+  content: '';
+  width: 3px;
+  position: absolute;
+  transform: rotate(-52deg);
+	top: 22px;
+	height: 12px;
+  display: block;
+  background-color: black;
+}
+.left-icon:after {
+  content: '';
+  width: 3px;
+  position: absolute;
+  transform: rotate(230deg);
+	top: 16px;
+	height: 12px;
+  display: block;
+  background-color: black;
+}
+
+
+
+
